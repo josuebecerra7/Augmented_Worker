@@ -1,5 +1,8 @@
 # Josue Becerra Rico
 
+# Set accuracy
+accuracy = 0.5
+
 # Import libraries
 import cv2
 import matplotlib.pyplot as plt
@@ -35,7 +38,7 @@ font = cv2.FORMATTER_FMT_PYTHON
 
 while True:
     ret, frame = cap.read()
-    ClassIndex, confidence, bbox = model.detect(frame, confThreshold=0.45)
+    ClassIndex, confidence, bbox = model.detect(frame, confThreshold=accuracy)
     
  #   print(ClassIndex)
     if (len(ClassIndex)!=0):

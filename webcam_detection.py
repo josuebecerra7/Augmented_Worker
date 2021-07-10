@@ -39,8 +39,7 @@ font = cv2.FORMATTER_FMT_PYTHON
 while True:
     ret, frame = cap.read()
     ClassIndex, confidence, bbox = model.detect(frame, confThreshold=accuracy)
-    
- #   print(ClassIndex)
+
     if (len(ClassIndex)!=0):
         for ClassInd, conf, boxes in zip(ClassIndex.flatten(), confidence.flatten(), bbox):
             if (ClassInd<=91):

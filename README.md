@@ -1,5 +1,5 @@
 # AUGMENTED WORKER
-
+Josue Becerra Rico
 ## Pre-requisites
 - Python 3
 - OpenCV library

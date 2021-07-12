@@ -1,6 +1,5 @@
-# AUGMENTED WORKER
-Josue Becerra Rico
-## Pre-requisites
+# Augmented Worker
+## Pre-requisites
 - Python 3
 - OpenCV library
 ´´´

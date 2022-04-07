@@ -27,7 +27,7 @@ model.setInputScale(1.0/127.5) # 255/2 = 127.5
 model.setInputMean((127.5,127.5,127.5)) # mobilenet takes [-1,1]
 model.setInputSwapRB(True)
 
-cap = cv2.VideoCapture(0)
+cap =  cv2.VideoCapture('long.mp4')
 
 # Check if the video is opened
 if not cap.isOpened():
@@ -43,6 +43,7 @@ while True:
     if (len(ClassIndex)!=0):
         for ClassInd, conf, boxes in zip(ClassIndex.flatten(), confidence.flatten(), bbox):
             if (ClassInd<=91):
+                print(ClassInd)
                 cv2.rectangle(frame, boxes, (255,0,0), 2)
                 cv2.putText(frame,classLabels[ClassInd-1],(boxes[0]+10, boxes[1]+40), font, fontScale=font_scale, color=(15,200,10), thickness=3)
     cv2.imshow('Object Detection', frame)

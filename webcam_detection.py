@@ -27,7 +27,7 @@ model.setInputScale(1.0/127.5) # 255/2 = 127.5
 model.setInputMean((127.5,127.5,127.5)) # mobilenet takes [-1,1]
 model.setInputSwapRB(True)
 
-cap = cv2.VideoCapture(0)
+cap = cv2.VideoCapture('https://Josue:12345678@192.168.43.89/api/holographic/stream/live_med.mp4?holo=true&pv=true&mic=true&loopback=true')
 
 # Check if the video is opened
 if not cap.isOpened():
